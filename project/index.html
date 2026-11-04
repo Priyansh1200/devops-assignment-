@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps CI/CD Deployment Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="badge-live">
+                <span class="pulse-dot"></span>
+                <span>SYSTEM ACTIVE • LOCALHOST:8081</span>
+            </div>
+            <h1>🚀 DevOps Automated CI/CD Pipeline</h1>
+            <p class="subtitle">Continuous Integration & Automated Deployment with GitHub, Jenkins & Docker</p>
+        </header>
+
+        <!-- Pipeline Workflow Progress -->
+        <section class="pipeline-section">
+            <h2 class="section-title">Assignment Pipeline Workflow</h2>
+            <div class="pipeline-flow">
+                <div class="step-card completed">
+                    <div class="step-number">Step 1</div>
+                    <div class="step-icon">🐙</div>
+                    <h3>GitHub Pull</h3>
+                    <p>Jenkins automatically pulls the latest code triggered by SCM polling / webhook.</p>
+                    <span class="status-tag success">Automated</span>
+                </div>
+
+                <div class="flow-arrow">➔</div>
+
+                <div class="step-card completed">
+                    <div class="step-number">Step 2</div>
+                    <div class="step-icon">🐳</div>
+                    <h3>Docker Hub</h3>
+                    <p>Jenkins builds the Docker image and pushes the tagged release to Docker Hub.</p>
+                    <span class="status-tag success">Built & Pushed</span>
+                </div>
+
+                <div class="flow-arrow">➔</div>
+
+                <div class="step-card completed">
+                    <div class="step-number">Step 3</div>
+                    <div class="step-icon">💻</div>
+                    <h3>Local Deploy</h3>
+                    <p>Image pulled locally, container deployed, and served at localhost:8081.</p>
+                    <span class="status-tag success">Live on Localhost</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Environment & Telemetry Info -->
+        <section class="telemetry-grid">
+            <div class="info-card">
+                <h3>📦 Container Info</h3>
+                <ul>
+                    <li><strong>Status:</strong> <span class="highlight-green">Running (Healthy)</span></li>
+                    <li><strong>Server:</strong> Nginx Alpine (Lightweight)</li>
+                    <li><strong>Internal Port:</strong> 80</li>
+                    <li><strong>Host Mapping:</strong> localhost:8081</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>⚙️ Pipeline Configuration</h3>
+                <ul>
+                    <li><strong>CI/CD Engine:</strong> Jenkins Continuous Integration</li>
+                    <li><strong>SCM:</strong> GitHub Repository</li>
+                    <li><strong>Registry:</strong> Docker Hub</li>
+                    <li><strong>Deployment:</strong> Automated Docker Container</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>⏱️ System Diagnostics</h3>
+                <ul>
+                    <li><strong>Client Time:</strong> <span id="live-clock">--:--:--</span></li>
+                    <li><strong>App State:</strong> <span class="highlight-green">Online (HTTP 200 OK)</span></li>
+                    <li><strong>Health Checks:</strong> 100% Passed</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Interactive Testing Console -->
+        <section class="interactive-section">
+            <h3>Interactive Pipeline Diagnostics</h3>
+            <div class="button-group">
+                <button id="btn-health" class="btn btn-primary">Check Health Status</button>
+                <button id="btn-simulate" class="btn btn-secondary">Simulate Pipeline Event</button>
+                <button id="btn-toggle-theme" class="btn btn-outline">Toggle Theme</button>
+            </div>
+            <div id="terminal-box" class="terminal-box">
+                <div class="terminal-header">
+                    <span class="term-dot red"></span>
+                    <span class="term-dot yellow"></span>
+                    <span class="term-dot green"></span>
+                    <span class="term-title">Console Output</span>
+                </div>
+                <div id="terminal-logs" class="terminal-body">
+                    <p class="log-line">[SYSTEM] Deployment portal loaded successfully.</p>
+                    <p class="log-line">[DOCKER] Container running via nginx:alpine on port 8081.</p>
+                    <p class="log-line highlight">[VERIFY] Ready for lab evaluation.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>DevOps Assignment Project • Configured for GitHub ➔ Jenkins ➔ Docker Hub ➔ Localhost</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="Script.js"></script>
+</body>
+</html>

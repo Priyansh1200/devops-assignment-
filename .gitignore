@@ -1,0 +1,10 @@
+# System and editor files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+
+# Build and log artifacts
+*.log
